@@ -271,3 +271,97 @@
 }
 
 /* END FEATURES */
+
+/* START ARTICLE */
+.article .container {
+    padding: 50px 30px;
+    color: white;
+    background-image: url("./imgs/work-from-home.jpg");
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2000;
+
+}
+
+@media (max-width: 767px) {
+    .article .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.article .container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #122333;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.article .text {
+    flex-basis: 40%;
+}
+
+@media (max-width: 767px) {
+    .article .text {
+        margin-bottom: 50px;
+    }
+}
+
+.article .text h1 {
+    margin-bottom: 50px;
+    font-size: 40px;
+    position: relative;
+}
+
+.article .text h1::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: var(--main-color);
+    bottom: -20px;
+}
+
+.article .text p {
+    line-height: 2;
+    font-size: 19px;
+    margin-bottom: 36px;
+}
+
+.article .text a {
+    text-decoration: none;
+    background-color: var(--main-color);
+    font-size: 28px;
+    color: white;
+    padding: 9px 24px;
+    border-radius: 5px;
+}
+
+.article .image {
+    flex-basis: 40%;
+
+}
+
+@media (max-width: 767px) {
+    .article .image {
+        width: 80%;
+    }
+}
+
+.article .image img {
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+/* END ARTICLE */
