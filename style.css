@@ -171,3 +171,103 @@
 }
 
 /* END HEADING */
+
+/* START FEATURES */
+
+.features {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 150px;
+}
+
+@media (min-width: 416px) and (max-width: 768px) {
+    .features {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    .features {
+        margin-top: 200px;
+    }
+}
+
+/* Medium Screens */
+@media (min-width: 992px) {
+    .features {
+        margin-top: 270px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+    .features {
+        margin-top: 330px;
+    }
+}
+
+.features .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.features .feature {
+    counter-increment: feature;
+    flex-basis: 26%;
+    background-color: #f2f8fa;
+    padding: 60px 20px 20px 20px;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .features .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .features .feature {
+        margin-bottom: 20px;
+    }
+}
+
+.features .feature::before {
+    content: "0" counter(feature);
+    position: absolute;
+    top: 17%;
+    left: 20px;
+    font-size: 24px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.features .feature h1 {
+    text-transform: uppercase;
+    color: #383838;
+    margin: 30px 0 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+.features .feature p {
+    color: #8d8d8d;
+    margin-bottom: 20px;
+}
+
+.features .feature a {
+    text-decoration: none;
+    color: var(--main-color);
+    position: relative;
+}
+
+.features .feature a::after {
+    content: "\f30b";
+    position: absolute;
+    right: 0;
+    font: var(--fa-font-solid);
+    top: 50%;
+    transform: translate(147%, -35%);
+    font-size: 12px;
+}
+
+/* END FEATURES */
