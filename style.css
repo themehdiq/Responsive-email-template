@@ -1,3 +1,5 @@
+/* START GLOBAL RULES */
+
 :root {
     --main-color: #ed4c21;
 }
@@ -7,5 +9,165 @@
     padding: 0;
     font-family: "Noto Sans",
         sans-serif;
-    ;
+    list-style: none;
+    box-sizing: border-box;
 }
+
+.container {
+    margin: 0 auto;
+
+}
+
+/* Small Screens */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium Screens */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* END GLOBAL RULES */
+
+/* START HEADING */
+.heading .container {
+    height: 340px;
+    background-image: url(./imgs/Stock\ Photo\ Adults\ Years\ SMALL.jpg);
+    background-size: cover;
+    position: relative;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    padding-left: 26px;
+}
+
+.heading .container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+    opacity: 0.7;
+}
+
+.heading .heading-left {
+    padding: 30px 35px 40px;
+    position: relative;
+    width: 45%;
+    background: #122333;
+    color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    z-index: 2000;
+}
+
+.heading .heading-left h1 {
+    font-weight: normal;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .heading .heading-left {
+        width: 80%;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .heading .heading-left h1 {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    .heading .heading-left h1 {
+        font-size: 60px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .heading .heading-left h1 {
+        font-size: 76px;
+    }
+}
+
+.heading .heading-left h1::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: var(--main-color);
+    bottom: -12px;
+}
+
+.heading .heading-left ul {
+    padding: 0 0 26px 40px;
+}
+
+.heading .heading-left ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: bold;
+}
+
+.heading .heading-left ul li::before {
+    content: "\f00c";
+    position: absolute;
+    font: var(--fa-font-solid);
+    left: -30px;
+    color: rgb(1, 159, 1);
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.heading .heading-left a {
+    text-decoration: none;
+    background-color: var(--main-color);
+    font-size: 28px;
+    color: white;
+    padding: 9px 24px;
+    border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+    .heading .heading-left a {
+        font-size: 16px;
+    }
+}
+
+.heading .heading-right {
+    width: 40%;
+    position: absolute;
+    right: 30px;
+    bottom: -76%;
+    border: 2px solid var(--main-color);
+    padding: 27px;
+    line-height: 2;
+}
+
+@media (max-width: 992px) {
+    .heading .heading-right {
+        display: none;
+    }
+}
+
+/* END HEADING */
